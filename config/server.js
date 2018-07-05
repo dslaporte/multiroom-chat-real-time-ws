@@ -22,9 +22,9 @@ app.use(bodyParser.urlencoded({extended :true}));
 app.use(expressValidator());
 
 consign()
-    .include('app/routes')
-    .then('app/models')
-    .then('app/controllers')
+    .include('./app/routes')
+    .then('./app/models')
+    .then('./app/controllers')
     .into(app);
 
 /*exportar o objeto app */
